@@ -1,0 +1,36 @@
+version: "3"
+services:
+  backend_1:
+    build: ../server
+    ports:
+      - "5010:5050"
+    environment:
+      - server=one
+  backend_2:
+    build: ../server
+    ports:
+      - "5020:5050"
+    environment:
+      - server=two
+  backend_3:
+    build: ../server
+    ports:
+      - "5030:5050"
+    environment:
+      - server=three
+  backend_4:
+    build: ../server
+    ports:
+      - "5040:5050"
+    environment:
+      - server=four
+
+  nginx:
+    build: ../nginx
+    ports:
+      - "4000:4000"
+    depends_on:
+      - backend_1
+      - backend_2
+      - backend_3
+      - backend_4
