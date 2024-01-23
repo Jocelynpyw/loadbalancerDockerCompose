@@ -2,10 +2,12 @@ const express = require("express");
 
 const app = express();
 const server = process.env.server || "GateWay";
+var randomNumber;
 
 app.get("/", (req, res) => {
-  res.send(`This is the response from the server ${server} `);
+  res.send(`This is the response from the server number: ${randomNumber}`);
 });
 app.listen(5050, () => {
   console.log("Listening...");
+  randomNumber = Math.floor(Math.random() * 10000);
 });
