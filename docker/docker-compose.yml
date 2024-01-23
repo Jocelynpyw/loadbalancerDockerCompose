@@ -3,9 +3,7 @@ services:
   backend:
     build: ../server
     deploy:
-      replicas: 4
-    environment:
-      - CONTAINER_NAME=backend_${i}
+      replicas: 3
     networks:
       - loadbalancing
 

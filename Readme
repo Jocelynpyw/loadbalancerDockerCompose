@@ -1,0 +1,7 @@
+##### Pour lancer le projet avoir "docker" et "docker compose" installer sur sa machine
+
+### ensuite ouvrir le projet puis se placer sous le repertoire docker (cd docker)
+
+#### lancer la commande "docker compose up -d"
+
+#### ensuite se rendre a l'adresse localhost:4000
